@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Basic Web Page</title>
+  <style>
+    /* CSS styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #617488;
+      color: #333;
+    }
+
+    nav {
+      background-color: #0077cc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 10px;
+    }
+
+    button {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <!-- Main Content -->
+  <header>
+    <h1>Welcome to MeowCafe</h1>
+    <p>"This place is heaven"</p>
+  </header>
+
+  <div class="container">
+    <!-- Responsive Image -->
+    <img src="Meowsome.jpg" alt="Meowsome Cat">
+
+    <!-- Button -->
+    <p><button onclick="showMessage()">Click Me!</button></p>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function showMessage() {
+      alert("Hello! You already click the Button.");
+    }
+  </script>
+</body>
+</html>
+s
