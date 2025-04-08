@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mock Store</title>
+
+  <!-- Link to the Web App Manifest -->
+  <link rel="manifest" href="manifest.json" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    header {
+      background-color: #343a40;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background-color: #495057;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #343a40;
+      color: white;
+      margin-top: 30px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        width: 90%;
+      }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .card {
+        width: 45%;
+      }
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Mock Store</h1>
+    <p>Your one-stop shop for awesome stuff!</p>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Products</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200" alt="Product 1">
+      <h3>Product 1</h3>
+      <p>$19.99</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200" alt="Product 2">
+      <h3>Product 2</h3>
+      <p>$24.99</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200" alt="Product 3">
+      <h3>Product 3</h3>
+      <p>$14.99</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Mock Store. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then((registration) => {
+            console.log('Service Worker registered:', registration);
+          })
+          .catch((error) => {
+            console.log('Service Worker registration failed:', error);
+          });
+      });
+    }
+  </script>
+
+</body>
+</html>

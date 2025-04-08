@@ -1,0 +1,12 @@
+{
+    "name": "Mock Store",
+    "short_name": "Store",
+    "description": "An awesome mock online store.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#343a40",
+    "theme_color": "#495057",
+    "icons": [    
+    ]
+  }
+  
