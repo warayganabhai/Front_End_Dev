@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mock Store</title>
 
-  <!-- Link to the Web App Manifest -->
   <link rel="manifest" href="manifest.json" />
 
   <style>
@@ -73,7 +72,6 @@
       margin-top: 30px;
     }
 
-    /* Responsive Design */
     @media (max-width: 768px) {
       nav {
         flex-direction: column;
@@ -100,57 +98,44 @@
 </head>
 <body>
 
-  <!-- Header -->
   <header>
     <h1>Mock Store</h1>
     <p>Your one-stop shop for awesome stuff!</p>
   </header>
 
-  <!-- Navigation Bar -->
   <nav>
     <a href="#">Home</a>
-    <a href="#">Products</a>
-    <a href="#">Contact</a>
+    <a href="#">Products: Devices</a>
+    <a href="#">Contact: 091234567800</a>
   </nav>
 
-  <!-- Main Content -->
   <div class="container">
     <div class="card">
-      <img src="https://via.placeholder.com/300x200" alt="Product 1">
-      <h3>Product 1</h3>
-      <p>$19.99</p>
+      <img src="OPPO A16k.png" alt="Oppo A16k">
+      <h3>Oppo A16k</h3>
+      <p>₱5,499.00</p>
     </div>
     <div class="card">
-      <img src="https://via.placeholder.com/300x200" alt="Product 2">
-      <h3>Product 2</h3>
-      <p>$24.99</p>
+      <img src="Apple Laptop.jpg" alt="Apple Laptop">
+      <h3>Apple Laptop</h3>
+      <p>₱225,499.00</p>
     </div>
     <div class="card">
-      <img src="https://via.placeholder.com/300x200" alt="Product 3">
-      <h3>Product 3</h3>
-      <p>$14.99</p>
+      <img src="Lenovo Tablet.jpg" alt="Lenovo Tablet">
+      <h3>Lenovo Tablet</h3>
+      <p>₱55,499.00</p>
     </div>
   </div>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Mock Store. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript for Service Worker Registration -->
   <script>
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js')
-          .then((registration) => {
-            console.log('Service Worker registered:', registration);
-          })
-          .catch((error) => {
-            console.log('Service Worker registration failed:', error);
-          });
-      });
+        navigator.serviceWorker.register('./service-worker.js');
     }
-  </script>
+</script>
 
 </body>
 </html>
